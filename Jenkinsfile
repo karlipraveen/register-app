@@ -10,7 +10,7 @@ pipeline{
         DOCKER_USER = "karlipraveen"
         DOCKER_PASS = "dockerhub" // Name created in credentails
         IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
-        IMAGE_TAG = "${IMAGE_NAME}-${BUILD_NAME}"
+        IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
         stages{
         stage("Cleanup Workspace"){
